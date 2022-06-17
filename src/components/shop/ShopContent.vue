@@ -23,6 +23,9 @@
       <div class="error-content text-center" v-if="isAllItemsLoaded">
         <h3>No more results to show!</h3>
       </div>
+      <div class="error-content text-center" v-if="errored">
+        <h3>Somethig went wrong!</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -50,6 +53,7 @@ export default {
       totalCount: 0,
       loading: true,
       isAllItemsLoaded: false,
+      errored: false,
       filters: {
         colors: [],
         shapes: [],
@@ -60,13 +64,23 @@ export default {
     getGlasses() {
       this.loading = true;
 
-      axios.get(this.buildQuery()).then((res) => {
-        this.glasses.push(...res.data.glasses);
-        this.totalCount = res.data.meta.total_count;
+      axios
+        .get(this.buildQuery())
+        .then((res) => {
+          this.glasses.push(...res.data.glasses);
+          this.totalCount = res.data.meta.total_count;
 
-        this.isAllItemsLoaded = this.glasses.length === this.totalCount;
-        this.loading = false;
-      });
+          this.isAllItemsLoaded = this.glasses.length === this.totalCount;
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+
+          this.errored = true;
+          this.loading = false;
+        })
+        .finally(() => {
+          this.loading = false;
+        });
     },
     buildQuery() {
       let queryString = `/collections/${this.$route.params.col_name}/glasses`;

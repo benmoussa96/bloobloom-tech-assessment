@@ -1,4 +1,4 @@
-<template>
+git remote add origin<template>
   <div :class="['header-aside-active', showSideMenu ? 'inside' : '']">
     <div class="header-aside-wrap">
       <a class="aside-close" @click="toggleSideMenu"
