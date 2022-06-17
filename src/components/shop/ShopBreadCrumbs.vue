@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { HTTP } from "../../http-common";
 
 export default {
   name: "BreadCrumbs",
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     getCollection() {
-      axios.get(`/collections`).then((res) => {
+      HTTP.get(`/collections`).then((res) => {
         this.collection = res.data.collections.filter((col) => {
           return col.configuration_name === this.$route.params.col_name;
         })[0];

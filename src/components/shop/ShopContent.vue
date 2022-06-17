@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { HTTP } from "../../http-common";
 
 import ScaleLoader from "../helpers/ScaleLoader.vue";
 
@@ -64,8 +64,7 @@ export default {
     getGlasses() {
       this.loading = true;
 
-      axios
-        .get(this.buildQuery())
+      HTTP.get(this.buildQuery())
         .then((res) => {
           this.glasses.push(...res.data.glasses);
           this.totalCount = res.data.meta.total_count;
