@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "label": "Spectacles",
+        "children": [
+            {
+                "id": 2,
+                "label": "Men",
+                "path": "/collections/spectacles-men"
+            },
+            {
+                "id": 3,
+                "label": "Women",
+                "path": "s/collections/pectacles-women"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "label": "Sunglasses",
+        "children": [
+            {
+                "id": 5,
+                "label": "Men",
+                "path": "/collections/sunglasses-men"
+            },
+            {
+                "id": 6,
+                "label": "Women",
+                "path": "/collections/sunglasses-women"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "label": "Home Try On"
+    },
+    {
+        "id": 8,
+        "label": "Pair For Pair"
+    }
+]
