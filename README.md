@@ -1,4 +1,5 @@
 # bloobloom-tech-assessment
+Front End tech assessment built with Vue.js, HTML5 and CSS3.
 
 ## Project setup
 ```
