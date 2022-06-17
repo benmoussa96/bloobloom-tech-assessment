@@ -5,7 +5,7 @@
         <div class="col-md-12">
           <div class="home-content text-center">
             <img src="../assets/images/logo/bloobloom_logo.png" alt="banner" />
-            <h3>Tech Assessment!</h3>
+            <h3>Tech Assessment</h3>
             <p>
               By <a href="https://github.com/benmoussa96">Ghaieth BEN MOUSSA</a>
             </p>
