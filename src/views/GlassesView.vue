@@ -1,16 +1,16 @@
 <template>
-  <BreadCrumbs />
+  <ShopBreadCrumbs />
   <ShopContent />
 </template>
 
 <script>
-import BreadCrumbs from "@/components/shop/ShopBreadCrumbs.vue";
+import ShopBreadCrumbs from "@/components/shop/ShopBreadCrumbs.vue";
 import ShopContent from "@/components/shop/ShopContent.vue";
 
 export default {
   name: "GlassesView",
   components: {
-    BreadCrumbs,
+    ShopBreadCrumbs,
     ShopContent,
   },
 };
